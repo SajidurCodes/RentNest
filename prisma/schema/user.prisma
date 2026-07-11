@@ -1,0 +1,14 @@
+model User {
+  id         String   @id @default(uuid())
+  name       String
+  email      String   @unique
+  password   String
+  phone      String?
+  role       Role
+  isBanned   Boolean  @default(false)
+  properties Property[]
+  rentals    RentalRequest[]
+  reviews    Review[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
