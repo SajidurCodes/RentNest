@@ -14,6 +14,8 @@ import { stripe } from "../../lib/stripe";
 
 const createPayment = async (payload: ICreatePaymentPayload,user: {id: string;email: string;}) => {
 
+    //console.log("From create payment");
+
     const { rentalRequestId } = payload;
 
     const rentalRequest = await prisma.rentalRequest.findUnique({
@@ -24,6 +26,8 @@ const createPayment = async (payload: ICreatePaymentPayload,user: {id: string;em
             property: true
         }
     });
+
+    //console.log(rentalRequest);
 
     if (!rentalRequest) {
         throw new Error("Rental request not found.");
@@ -72,6 +76,8 @@ const createPayment = async (payload: ICreatePaymentPayload,user: {id: string;em
 
     const amount = Math.round(rentalRequest.property.rentAmount);
 
+    //console.log(amount);
+
     const session = await stripe.checkout.sessions.create({
         mode: "payment",
         payment_method_types: ["card"],
@@ -110,6 +116,8 @@ const createPayment = async (payload: ICreatePaymentPayload,user: {id: string;em
             status: PaymentStatus.PENDING
         }
     });
+
+    console.log(payment);
 
     return {paymentUrl: session.url,payment};
 
@@ -152,6 +160,7 @@ const getPaymentById = async (paymentId: string, tenantId: string) => {
 };
 
 const webhook = async (payload: Buffer,signature: string) => {
+    console.log("This is web hook!!");
 
     const endpointSecret = config.stripe_webhook_secret;
     const event = stripe.webhooks.constructEvent(payload,signature,endpointSecret);
@@ -175,6 +184,7 @@ const webhook = async (payload: Buffer,signature: string) => {
 const handleCheckoutCompleted = async (session: Stripe.Checkout.Session) => {
 
     const rentalRequestId = session.metadata?.rentalRequestId;
+    console.log(rentalRequestId);
 
     if (!rentalRequestId) {
         throw new Error("Rental Request Id not found!!!!!!!😔😔😔");

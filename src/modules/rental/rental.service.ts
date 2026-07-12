@@ -175,10 +175,8 @@ const approveRentalRequest = async (rentalId: string,landlordId: string) =>{
     }
 
 
-    // Granting the request
-    const result = await prisma.$transaction(async(tx)=>{
 
-        const updatedRental = await tx.rentalRequest.update({
+    const result = await prisma.rentalRequest.update({
             where:{
                 id:rentalId
             },
@@ -195,24 +193,8 @@ const approveRentalRequest = async (rentalId: string,landlordId: string) =>{
                 }
 
             }
-
         });
-
-        // So that property now unavailable 
-
-        await tx.property.update({
-            where:{id:rentalRequest.propertyId},
-            data:{isAvailable:false}
-
-        });
-
-        // ---------------------------------------
-        // Stripe Payment will be implemented later
-        // ---------------------------------------
-
-        return updatedRental;
-
-    });
+    
 
     return result;
 
