@@ -16,11 +16,11 @@ router.get("/me",auth(Role.ADMIN, Role.LANDLORD, Role.TENANT),userController.get
 router.patch("/me",auth(Role.ADMIN, Role.LANDLORD, Role.TENANT),userController.updateProfile);
 
 
-router.get("/",auth(Role.ADMIN),userController.getAllUsers);
+router.get("/admin",auth(Role.ADMIN),userController.getAllUsers);
 
-router.patch("/ban/:userId",auth(Role.ADMIN),userController.banUser);
+router.patch("/admin/ban/:userId",auth(Role.ADMIN),userController.banUser);
 
-router.patch("/unban/:userId",auth(Role.ADMIN),userController.unbanUser);
+router.patch("/admin/unban/:userId",auth(Role.ADMIN),userController.unbanUser);
 
 
 
