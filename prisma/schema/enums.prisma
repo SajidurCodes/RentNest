@@ -25,6 +25,3 @@ enum PaymentStatus {
 
 
 
-enum PaymentProvider {
-  STRIPE
-}
