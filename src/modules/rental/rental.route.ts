@@ -12,15 +12,16 @@ const router = Router();
 
 //Tenant 
 
-router.post("/",auth(Role.TENANT),rentalController.createRentalRequest);
-router.get("/",auth(Role.TENANT),rentalController.getMyRentalRequests);
-router.get("/:rentalId",auth(Role.TENANT, Role.LANDLORD, Role.ADMIN),rentalController.getRentalRequestById);
+router.post("/tenant",auth(Role.TENANT),rentalController.createRentalRequest);
+router.get("/tenant",auth(Role.TENANT),rentalController.getMyRentalRequests);
+router.get("/:rentalId",rentalController.getRentalRequestById);
+
 
 
 //Landlord
 
 router.get("/landlord/requests",auth(Role.LANDLORD),rentalController.getLandlordRentalRequests);
-router.patch("/:rentalId/approve",auth(Role.LANDLORD),rentalController.approveRentalRequest);
-router.patch("/:rentalId/reject",auth(Role.LANDLORD),rentalController.rejectRentalRequest);
+router.patch("/landlord/approve/:rentalId",auth(Role.LANDLORD),rentalController.approveRentalRequest);
+router.patch("/landlord/reject/:rentalId",auth(Role.LANDLORD),rentalController.rejectRentalRequest);
 
 export const rentalRoutes = router;

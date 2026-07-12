@@ -4,6 +4,7 @@ export interface ICreateRentalRequest {
     propertyId: string;
     moveInDate: Date;
     duration: number;
+    message?: string;
 }
 
 export interface IUpdateRentalRequest {

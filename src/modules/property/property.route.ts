@@ -15,9 +15,9 @@ router.get("/:propertyId", propertyController.getPropertyById);
 
 //Landlord
 
-router.post("/",auth(Role.LANDLORD),propertyController.createProperty);
-router.get("/my/properties",auth(Role.LANDLORD),propertyController.getMyProperties);
-router.patch("/:propertyId",auth(Role.LANDLORD),propertyController.updateProperty);
-router.delete("/:propertyId",auth(Role.LANDLORD),propertyController.deleteProperty);
+router.post("/landlord",auth(Role.LANDLORD),propertyController.createProperty);
+router.get("/landlord/my/properties/:landlordId",auth(Role.LANDLORD),propertyController.getMyProperties);
+router.patch("/landlord/:propertyId",auth(Role.LANDLORD),propertyController.updateProperty);
+router.delete("/landlord/:propertyId",auth(Role.LANDLORD),propertyController.deleteProperty);
 
 export const propertyRoutes = router;

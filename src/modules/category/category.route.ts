@@ -11,10 +11,10 @@ const router=Router();
 
 
 
-router.post("/",auth(Role.ADMIN),categoryController.createCategory);
+router.post("/admin",auth(Role.ADMIN),categoryController.createCategory);
 router.get("/",categoryController.getAllCategories);
 router.get("/:categoryId",categoryController.getCategoryById);
-router.patch("/:categoryId",auth(Role.ADMIN),categoryController.updateCategory);
-router.delete("/:categoryId",auth(Role.ADMIN),categoryController.deleteCategory);
+router.patch("/admin/:categoryId",auth(Role.ADMIN),categoryController.updateCategory);
+router.delete("/admin/:categoryId",auth(Role.ADMIN),categoryController.deleteCategory);
 
 export const categoryRoutes=router;

@@ -116,11 +116,7 @@ const getMyProperties = async (landlordId: string) => {
         omit: {
           password: true,
         },
-      },
-
-      reviews: true,
-
-      rentalRequests: true,
+      }
     }
   });
 
@@ -177,11 +173,6 @@ const getAllProperties = async (query: IPropertyQuery) => {
 
     }
 
-    // Property Type
-    if (query.propertyType) {
-        andConditions.push({propertyType: query.propertyType});
-
-    }
 
     // Category
     if (query.categoryId) {
