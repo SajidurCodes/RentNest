@@ -99,9 +99,7 @@ const getAllUsers = async (query: IUserQuery) => {
 
 
   if (query.isBanned !== undefined) {
-    andConditions.push({
-      isBanned: query.isBanned,
-    });
+    andConditions.push({isBanned: query.isBanned});
   }
 
 
