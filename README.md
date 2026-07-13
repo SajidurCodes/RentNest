@@ -9,6 +9,10 @@ RentNest is a backend API for a rental property marketplace. Landlords can list 
 
 ---
 
+## 🌐 Live API
+
+**🔗 Live Link:** [Click Here](https://rent-nest-gules.vercel.app/)
+
 ## Roles & Permissions
 
 | Role | Description | Key Permissions |
