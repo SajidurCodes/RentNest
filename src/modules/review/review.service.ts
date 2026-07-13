@@ -22,7 +22,7 @@ const createReview = async (payload: ICreateReview,tenantId: string) => {
         where:{
             tenantId,
             propertyId:payload.propertyId,
-            status:RentalStatus.COMPLETED
+            status:RentalStatus.ACTIVE
         }
     });
 

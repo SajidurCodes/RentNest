@@ -210,6 +210,7 @@ const handleCheckoutCompleted = async (session: Stripe.Checkout.Session) => {
 
     
     await prisma.$transaction(async (tx) => {
+        
         await tx.payment.update({
             where: {
                 id: payment.id
