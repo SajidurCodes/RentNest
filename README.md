@@ -54,59 +54,29 @@ RentNest is a backend API for a rental property marketplace. Landlords can list 
 
 ---
 
+# 🗄️ Entity Relationship Diagram (ERD)
 
-### Authentication
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/register` | Register new user (tenant/landlord) |
-| POST | `/api/auth/login` | Login user, return JWT |
-| GET | `/api/auth/me` | Get current authenticated user |
+The following Entity Relationship Diagram (ERD) illustrates the database schema and relationships between the core entities used in **RentNest**.
 
-### Properties (Public)
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/properties` | Get all properties with filters (location, price, type) |
-| GET | `/api/properties/:id` | Get property details |
-| GET | `/api/categories` | Get all property categories |
+<p align="center">
+  <img src="./RentNest.drawio.png" alt="RentNest ER Diagram" width="100%">
+</p>
 
-### Landlord Management
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/landlord/properties` | Create new property listing |
-| PUT | `/api/landlord/properties/:id` | Update property listing |
-| DELETE | `/api/landlord/properties/:id` | Remove property listing |
-| GET | `/api/landlord/requests` | Get all rental requests for landlord's properties |
-| PATCH | `/api/landlord/requests/:id` | Approve or reject a rental request |
+> **Note:** If your ERD file has a different name, replace `ERD.png` with the correct filename (e.g., `er-diagram.png`, `database-schema.png`, etc.).
 
-### Rental Requests
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/rentals` | Submit a rental request (tenant) |
-| GET | `/api/rentals` | Get user's rental requests |
-| GET | `/api/rentals/:id` | Get rental request details |
-
-### Payments (Stripe / SSLCommerz)
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/payments/create` | Create a payment intent/session for an approved rental |
-| POST | `/api/payments/confirm` | Confirm/verify payment (webhook or callback) |
-| GET | `/api/payments` | Get user's payment history |
-| GET | `/api/payments/:id` | Get payment details |
-
-### Reviews
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/reviews` | Create review (after completed rental) |
-
-### Admin
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/admin/users` | Get all users |
-| PATCH | `/api/admin/users/:id` | Update user status (ban/unban) |
-| GET | `/api/admin/properties` | Get all properties |
-| GET | `/api/admin/rentals` | Get all rental requests |
 
 ---
+
+
+
+
+
+
+
+
+
+
+
 
 ## Database Tables
 
@@ -115,7 +85,7 @@ RentNest is a backend API for a rental property marketplace. Landlords can list 
 - **Properties** - Rental property listings (linked to landlord)
 - **Categories** - Property type categories (apartment, house, studio, etc.)
 - **RentalRequests** - Rental requests between tenants and landlords
-- **Payments** - Payment transactions (transactionId, rentalRequestId, amount, method, provider [Stripe/SSLCommerz], status [pending/completed/failed], paidAt, etc.)
+- **Payments** - Payment transactions (transactionId, rentalRequestId, amount, method, provider [Stripe], status [  PENDING/COMPLETED/FAILED],)
 - **Reviews** - Tenant reviews for properties
 
 
