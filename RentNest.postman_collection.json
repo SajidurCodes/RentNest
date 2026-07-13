@@ -1,0 +1,1112 @@
+{
+  "info": {
+    "_postman_id": "3d947079-dd6e-4ed5-8d5f-fd491e950a0a",
+    "name": "RentNest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39879044"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get My Profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sam@gmail.com\",\r\n    \"password\": \"1234\"\r\n}"
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app//api/users/me",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "",
+                "api",
+                "users",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Profile",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Sajidur Rahman Updated\",\r\n    \"phone\":\"01999999999\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/users/me",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Get All Users",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiOWNmZDlkLWUwOTEtNGM0MC1iYzAxLTZkY2FjMTFjZTQ5ZiIsIm5hbWUiOiJEb25hbGQgVHJ1bXAiLCJlbWFpbCI6InRydW1wQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4Mzk0MzE5NSwiZXhwIjoxNzg1MjM5MTk1fQ.VtSnfyLNrMCBhzC9-bPGz-uxSpfHsYcGep-Cub5rIW4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/users/admin",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "users",
+                "admin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Ban User",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiOWNmZDlkLWUwOTEtNGM0MC1iYzAxLTZkY2FjMTFjZTQ5ZiIsIm5hbWUiOiJEb25hbGQgVHJ1bXAiLCJlbWFpbCI6InRydW1wQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4Mzk0MzE5NSwiZXhwIjoxNzg1MjM5MTk1fQ.VtSnfyLNrMCBhzC9-bPGz-uxSpfHsYcGep-Cub5rIW4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sam@gmail.com\",\r\n    \"password\": \"1234\"\r\n}"
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app//api/users/admin/ban/6eba0419-7caf-41e2-aafd-4c1f14fb819b",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "",
+                "api",
+                "users",
+                "admin",
+                "ban",
+                "6eba0419-7caf-41e2-aafd-4c1f14fb819b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Unban User",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiOWNmZDlkLWUwOTEtNGM0MC1iYzAxLTZkY2FjMTFjZTQ5ZiIsIm5hbWUiOiJEb25hbGQgVHJ1bXAiLCJlbWFpbCI6InRydW1wQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4Mzk0MzE5NSwiZXhwIjoxNzg1MjM5MTk1fQ.VtSnfyLNrMCBhzC9-bPGz-uxSpfHsYcGep-Cub5rIW4",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/users/admin/unban/6eba0419-7caf-41e2-aafd-4c1f14fb819b",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "users",
+                "admin",
+                "unban",
+                "6eba0419-7caf-41e2-aafd-4c1f14fb819b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Search User",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiOWNmZDlkLWUwOTEtNGM0MC1iYzAxLTZkY2FjMTFjZTQ5ZiIsIm5hbWUiOiJEb25hbGQgVHJ1bXAiLCJlbWFpbCI6InRydW1wQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4Mzk0MzE5NSwiZXhwIjoxNzg1MjM5MTk1fQ.VtSnfyLNrMCBhzC9-bPGz-uxSpfHsYcGep-Cub5rIW4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sam@gmail.com\",\r\n    \"password\": \"1234\"\r\n}"
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/users/admin?searchTerm=messi&role=TENANT&sortBy=createdAt&sortOrder=desc",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "users",
+                "admin"
+              ],
+              "query": [
+                {
+                  "key": "searchTerm",
+                  "value": "messi"
+                },
+                {
+                  "key": "role",
+                  "value": "TENANT"
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "sortBy",
+                  "value": "createdAt"
+                },
+                {
+                  "key": "sortOrder",
+                  "value": "desc"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Sajid\",\r\n    \"email\": \"sajid@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"phone\": \"01665125222\",\r\n    \"role\": \"LANDLORD\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/auth/register",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"trump@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/auth/login",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get me",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"sajid@gmail.com\",\r\n    \"password\":\"123456\"\r\n}"
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/auth/me",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "Admin Post Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiOWNmZDlkLWUwOTEtNGM0MC1iYzAxLTZkY2FjMTFjZTQ5ZiIsIm5hbWUiOiJEb25hbGQgVHJ1bXAiLCJlbWFpbCI6InRydW1wQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4Mzk0MzE5NSwiZXhwIjoxNzg1MjM5MTk1fQ.VtSnfyLNrMCBhzC9-bPGz-uxSpfHsYcGep-Cub5rIW4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Couple\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/categories/admin",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "admin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all categories public",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sam@gmail.com\",\r\n    \"password\": \"1234\"\r\n}"
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/categories",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get category by id public",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sam@gmail.com\",\r\n    \"password\": \"1234\"\r\n}"
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/categories/1a4dc157-3ab6-46e9-82b3-84ce4d52bb4e",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "1a4dc157-3ab6-46e9-82b3-84ce4d52bb4e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin update category",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiOWNmZDlkLWUwOTEtNGM0MC1iYzAxLTZkY2FjMTFjZTQ5ZiIsIm5hbWUiOiJEb25hbGQgVHJ1bXAiLCJlbWFpbCI6InRydW1wQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4Mzk0MzE5NSwiZXhwIjoxNzg1MjM5MTk1fQ.VtSnfyLNrMCBhzC9-bPGz-uxSpfHsYcGep-Cub5rIW4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Family Friendly Basha Updated\"\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/categories/admin/1a4dc157-3ab6-46e9-82b3-84ce4d52bb4e",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "admin",
+                "1a4dc157-3ab6-46e9-82b3-84ce4d52bb4e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiOWNmZDlkLWUwOTEtNGM0MC1iYzAxLTZkY2FjMTFjZTQ5ZiIsIm5hbWUiOiJEb25hbGQgVHJ1bXAiLCJlbWFpbCI6InRydW1wQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4Mzk0MzE5NSwiZXhwIjoxNzg1MjM5MTk1fQ.VtSnfyLNrMCBhzC9-bPGz-uxSpfHsYcGep-Cub5rIW4",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/categories/admin/19a68745-bec3-44b8-b63c-4d09a9eb4fd5",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "admin",
+                "19a68745-bec3-44b8-b63c-4d09a9eb4fd5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Property",
+      "item": [
+        {
+          "name": "Landlord Create Property",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Lake View Flat\",\r\n    \"description\": \"Premium apartment overlooking the lake with excellent ventilation.\",\r\n    \"address\": \"Gulshan 2\",\r\n    \"city\": \"Dhaka\",\r\n    \"rentAmount\": 50000,\r\n    \"bedrooms\": 3,\r\n    \"bathrooms\": 3,\r\n    \"propertyType\": \"Apartment\",\r\n    \"isAvailable\": true,\r\n    \"categoryId\": \"bd990e62-3b7e-4872-85fd-813d3c2622a2\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/properties/landlord",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "properties",
+                "landlord"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lanlord get my properties",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/properties/landlord/my/properties/13c0607f-ced8-427d-9b94-5febb41b806f",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "properties",
+                "landlord",
+                "my",
+                "properties",
+                "13c0607f-ced8-427d-9b94-5febb41b806f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Landlord Update Property",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Updated Mordern Family\",\r\n    \"rentAmount\":22000,\r\n    \"bedrooms\":4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/properties/landlord/f25140ab-f825-4aba-b66c-41b622b8e9cd",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "properties",
+                "landlord",
+                "f25140ab-f825-4aba-b66c-41b622b8e9cd"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Landlord Delete Property",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/properties/landlord/8c19e7ab-0b3c-482d-a8ac-5fc3da063399",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "properties",
+                "landlord",
+                "8c19e7ab-0b3c-482d-a8ac-5fc3da063399"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Public Property",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/properties/",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "properties",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Public Property by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/properties/e1acbf1a-ec9e-4195-acf8-a158907a3698",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "properties",
+                "e1acbf1a-ec9e-4195-acf8-a158907a3698"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Public Property by search filter sort",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/properties?city=Dhaka&isAvailable=true&sortOrder=asc",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "properties"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "Dhaka"
+                },
+                {
+                  "key": "bedrooms",
+                  "value": "3",
+                  "disabled": true
+                },
+                {
+                  "key": "bathrooms",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "isAvailable",
+                  "value": "true"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "20000",
+                  "disabled": true
+                },
+                {
+                  "key": "minPrice",
+                  "value": "10000",
+                  "disabled": true
+                },
+                {
+                  "key": "sortOrder",
+                  "value": "asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rental Request",
+      "item": [
+        {
+          "name": "Tenant Rent req",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiYjAyMDgzLWVmMzEtNGUyMi04MmU2LThkMGMwNmNiOTE2ZCIsIm5hbWUiOiJNZXNzaSIsImVtYWlsIjoibWVzc2lAZ21haWwuY29tIiwicm9sZSI6IlRFTkFOVCIsImlhdCI6MTc4Mzk0MzE3MCwiZXhwIjoxNzg1MjM5MTcwfQ.turu3a5RHIqmkSsLr4OuFcynXN173i4MYaL8hbmRP6I",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"propertyId\":\"e1acbf1a-ec9e-4195-acf8-a158907a3698\",\r\n    \"moveInDate\":\"2025-9-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/rentals/tenant",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "rentals",
+                "tenant"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tenant get my rental req",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiYjAyMDgzLWVmMzEtNGUyMi04MmU2LThkMGMwNmNiOTE2ZCIsIm5hbWUiOiJNZXNzaSIsImVtYWlsIjoibWVzc2lAZ21haWwuY29tIiwicm9sZSI6IlRFTkFOVCIsImlhdCI6MTc4Mzk0MzE3MCwiZXhwIjoxNzg1MjM5MTcwfQ.turu3a5RHIqmkSsLr4OuFcynXN173i4MYaL8hbmRP6I",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/rentals/tenant",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "rentals",
+                "tenant"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Public Rental Requests by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/rentals/14fe08b0-4e48-4dff-98f2-d0b03b6c2ca8",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "rentals",
+                "14fe08b0-4e48-4dff-98f2-d0b03b6c2ca8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all landlord request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/rentals/landlord/requests",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "rentals",
+                "landlord",
+                "requests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Approve request by Landlord",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/rentals/landlord/approve/e911eb14-6aa7-4490-b70d-7f1c8c0ccdd5",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "rentals",
+                "landlord",
+                "approve",
+                "e911eb14-6aa7-4490-b70d-7f1c8c0ccdd5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reject Request",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwZmM4NTE1LTk4MTAtNDY3Ni04OGZlLWI3ZDU4NWI2Y2RjZiIsIm5hbWUiOiJTYWppZCIsImVtYWlsIjoic2FqaWRAZ21haWwuY29tIiwicm9sZSI6IkxBTkRMT1JEIiwiaWF0IjoxNzgzOTQzMTQyLCJleHAiOjE3ODUyMzkxNDJ9.KFbsqXYiGslKgXzouXt05POAWPnhXyuhzOxf29bjD10",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/rentals/landlord/reject/9c777cc5-3da5-42d7-a16f-5abb84a682df",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "rentals",
+                "landlord",
+                "reject",
+                "9c777cc5-3da5-42d7-a16f-5abb84a682df"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Review",
+      "item": [
+        {
+          "name": "Leave a review",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiYjAyMDgzLWVmMzEtNGUyMi04MmU2LThkMGMwNmNiOTE2ZCIsIm5hbWUiOiJNZXNzaSIsImVtYWlsIjoibWVzc2lAZ21haWwuY29tIiwicm9sZSI6IlRFTkFOVCIsImlhdCI6MTc4Mzk0MzE3MCwiZXhwIjoxNzg1MjM5MTcwfQ.turu3a5RHIqmkSsLr4OuFcynXN173i4MYaL8hbmRP6I",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"propertyId\":\"e1acbf1a-ec9e-4195-acf8-a158907a3698\",\r\n    \"rating\":5,\r\n    \"comment\":\"Excellent property. Very clean and peaceful.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/reviews/",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "reviews",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/reviews/property/e1acbf1a-ec9e-4195-acf8-a158907a3698",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "reviews",
+                "property",
+                "e1acbf1a-ec9e-4195-acf8-a158907a3698"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "Make Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiYjAyMDgzLWVmMzEtNGUyMi04MmU2LThkMGMwNmNiOTE2ZCIsIm5hbWUiOiJNZXNzaSIsImVtYWlsIjoibWVzc2lAZ21haWwuY29tIiwicm9sZSI6IlRFTkFOVCIsImlhdCI6MTc4Mzk0MzE3MCwiZXhwIjoxNzg1MjM5MTcwfQ.turu3a5RHIqmkSsLr4OuFcynXN173i4MYaL8hbmRP6I",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rentalRequestId\": \"e911eb14-6aa7-4490-b70d-7f1c8c0ccdd5\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/payments/create",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiYjAyMDgzLWVmMzEtNGUyMi04MmU2LThkMGMwNmNiOTE2ZCIsIm5hbWUiOiJNZXNzaSIsImVtYWlsIjoibWVzc2lAZ21haWwuY29tIiwicm9sZSI6IlRFTkFOVCIsImlhdCI6MTc4Mzk0MzE3MCwiZXhwIjoxNzg1MjM5MTcwfQ.turu3a5RHIqmkSsLr4OuFcynXN173i4MYaL8hbmRP6I",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/payments",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Single Payment",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiYjAyMDgzLWVmMzEtNGUyMi04MmU2LThkMGMwNmNiOTE2ZCIsIm5hbWUiOiJNZXNzaSIsImVtYWlsIjoibWVzc2lAZ21haWwuY29tIiwicm9sZSI6IlRFTkFOVCIsImlhdCI6MTc4Mzk0MzE3MCwiZXhwIjoxNzg1MjM5MTcwfQ.turu3a5RHIqmkSsLr4OuFcynXN173i4MYaL8hbmRP6I",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://rent-nest-gules.vercel.app/api/payments/4a040daa-73ba-48bc-bfde-fee702603cea",
+              "protocol": "https",
+              "host": [
+                "rent-nest-gules",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "4a040daa-73ba-48bc-bfde-fee702603cea"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
