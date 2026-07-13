@@ -22,6 +22,56 @@ RentNest is a backend API for a rental property marketplace. Landlords can list 
 ---
 
 
+---
+
+
+# 🧪 Demo Accounts
+
+You can use the following demo accounts to test different roles in the RentNest API.
+
+> **Note:** All passwords are `123456`.
+
+---
+
+## 👑 Admin
+
+### Credentials
+
+```json
+{
+  "email": "trump@gmail.com",
+  "password": "123456"
+}
+```
+---
+
+## 🏠 Landlord
+
+### Credentials
+
+```json
+{
+  "email": "sajid@gmail.com",
+  "password": "123456"
+}
+```
+
+---
+
+## 👤 Tenant
+
+### Credentials
+
+```json
+{
+  "email": "messi@gmail.com",
+  "password": "123456"
+}
+```
+
+---
+
+
 
 ## Features
 
