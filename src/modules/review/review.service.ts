@@ -17,35 +17,6 @@ const createReview = async (payload: ICreateReview,tenantId: string) => {
     }
 
 
-
-    const completedRental = await prisma.rentalRequest.findFirst({
-        where:{
-            tenantId,
-            propertyId:payload.propertyId,
-            status:RentalStatus.ACTIVE
-        }
-    });
-
-    if(!completedRental){
-        throw new Error("You can review only after completing the rental.!!!!");
-    }
-
-    const existingReview = await prisma.review.findFirst({
-        where:{
-            tenantId,
-            propertyId:payload.propertyId
-        }
-    });
-
-
-
-
-    if(existingReview){
-        throw new Error("You already reviewed this property.");
-    }
-
-
-
     const result = await prisma.review.create({data:{
             tenantId,
             propertyId:payload.propertyId,
