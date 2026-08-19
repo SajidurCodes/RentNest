@@ -1,0 +1,13 @@
+HTTP/1.1 204 No Content
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+Access-Control-Allow-Origin: https://rent-nest-gules.vercel.app
+Cache-Control: public, max-age=0, must-revalidate
+Date: Wed, 19 Aug 2026 19:23:48 GMT
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: Origin, Access-Control-Request-Headers
+X-Powered-By: Express
+X-Vercel-Cache: MISS
+X-Vercel-Id: bom1::iad1::7fdsc-1787167427965-72d796962086
+

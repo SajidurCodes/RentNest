@@ -14,21 +14,10 @@ import { paymentRoutes } from "./modules/payment/payment.route";
 
 const app: Application = express();
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  config.app_url, 
-].filter(Boolean);
-
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
-}));
+    origin : config.app_url,
+    credentials : true,
+}))
 
 app.use("/api/payments/confirm", express.raw({ type: 'application/json' }))
 app.use(cookieParser());
