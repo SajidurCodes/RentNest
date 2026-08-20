@@ -15,7 +15,10 @@ import { paymentRoutes } from "./modules/payment/payment.route";
 const app: Application = express();
 
 app.use(cors({
-    origin : config.app_url,
+    origin : [
+        config.app_url as string,
+        "http://localhost:3000",
+    ],
     credentials : true,
 }))
 
